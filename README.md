@@ -18,22 +18,22 @@ Let us visualize these trends and cary out descriptive statistics for all three 
 - Seasonlity
 - Trend
   
-3️⃣ Testing for stationarity first and secondly Unit Root
+3️⃣ Testing for stationarity using Unit Root Test
 Many economic and financial time series (e.g., inflation, GDP, stock prices) are non-stationary because they exhibit trends, seasonality, or other time-dependent structures. Non-stationary data can lead to
-Spurious Regression, thus we need to difference it. A time series is stationary if its statistical properties (mean, variance, and autocorrelation) remain constant over time, this is a key assumption in many time series models (e.g., ARIMA, VAR) because:
+Spurious Regression. A time series is stationary if its statistical properties (mean, variance, and autocorrelation) remain constant over time, this is a key assumption in many time series models (e.g., ARIMA, VAR) because:
 - Ensures that the relationships between variables are stable over time.
 - It simplifies modeling and forecasting.
-
   
-- By differencing, we ensure that your time series meets the stationarity assumption, leading to more reliable and interpretable models. Below is the visual differenced total inflation;
+- By differencing Total Inflation data, we will ensure that the time series meets the stationarity assumption. Below is the visual differenced Total Inflation;
   ![differenced total inflation](https://github.com/user-attachments/assets/8ce139e8-db48-4af6-a264-28f088f888a7)
 
-- As seen above, we can assume stationarity, but to confirm we need to test at 5% Significance level. Using ADF to test for UNIT ROOT we have the following result;
+- As seen above after differencing, we can assume stationarity because the mean seem to revolve on a costanttly by Zero, but to confirm we need to test at 5% Significance level.Setting up our Hypothesis of unit root test we have that; 
 - NULL HYPOTHESIS: Total Inflation is Stationery
 - ALTERNATIVE HYPOTHESIS: REJECT THE NULL HYPOTHESIS
 ![Screenshot_23-2-2025_1763_](https://github.com/user-attachments/assets/b7d85697-c70e-4b2f-a779-e6def6cb9a43)
+- Using ADF to test for UNIT ROOT we have the following result above.
 
-- INTERPRETATION:An ADF (Augmented Dickey-Fuller) test is a statistical method used to determine whether a time series is stationary by testing for the presence of a "unit root," which indicates non-stationarity; essentially, it's a type of unit root test used to check for stationarity in a time series data. Since our t-statistic Probality is 0.1977 which is greater than our significance level 0.05. We REJECT THE NULL HYPTHESIS, which confirma our initial assumption that the trend is Non-Stationary.
+- 💡INTERPRETATION:An ADF (Augmented Dickey-Fuller) test is a statistical method used to determine whether a time series is stationary by testing for the presence of a "unit root," which indicates non-stationarity. Since our t-statistic Probality is 0.1977 which is greater than our significance level 0.05. We fail to reject NULL HYPOTHESIS, which confirms our initial assumption that the trend is Non-Stationary.This suggests that our time series has a unit root and is non-stationary at the 5% significance level. This means the series exhibits trends, seasonality, or other time-dependent structures that need to be addressed before modeling.
 
 4️⃣ Building a forecasting model
 - In particular (ARIMA) model to predict future values.The AutoRegressive Integrated Moving Average (ARIMA) model is a powerful tool for inflation forecasting.
