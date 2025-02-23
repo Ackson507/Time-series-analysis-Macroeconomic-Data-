@@ -14,22 +14,23 @@ Let us visualize these trends and cary out descriptive statistics for all three 
 
 
 
+2️⃣ Insights from the Trend.
 
-
-2️⃣ Time-series decomposition.
-Identifying long-term trends, seasonality, and irregularities.
-
-- Trend: Long-term pattern (e.g., Is inflation increasing or decreasing over decades?).
-
-- Seasonality: Repeating patterns at regular intervals (e.g., Does inflation spike in certain months due to fuel price adjustments or harvest cycles?).
+- Seasonlity
+- Trend
   
-3️⃣ Testing for stationarity and Unit Root
-Applying transformations if necessary.
+3️⃣ Testing for stationarity first and secondly Unit Root
+Many economic and financial time series (e.g., inflation, GDP, stock prices) are non-stationary because they exhibit trends, seasonality, or other time-dependent structures. Non-stationary data can lead to
+Spurious Regression, thus we need to difference it. A time series is stationary if its statistical properties (mean, variance, and autocorrelation) remain constant over time, this is a key assumption in many time series models (e.g., ARIMA, VAR) because:
+- Ensures that the relationships between variables are stable over time.
+- It simplifies modeling and forecasting.
 
-- Why does it matter? Most forecasting models assume stationarity for accurate predictions.
   
-- How to test? We use the Augmented Dickey-Fuller (ADF) test.
-  
+- By differencing, we ensure that your time series meets the stationarity assumption, leading to more reliable and interpretable models. Below is the visual differenced total inflation;
+  ![differenced total inflation](https://github.com/user-attachments/assets/8ce139e8-db48-4af6-a264-28f088f888a7)
+
+- As seen above, we can assume stationarity, but to confirm we need to test at 5% Significance level.
+
 4️⃣ Building a forecasting model
 - In particular (ARIMA) model to predict future values.The AutoRegressive Integrated Moving Average (ARIMA) model is a powerful tool for inflation forecasting.
 
