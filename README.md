@@ -27,16 +27,24 @@ Spurious Regression. A time series is stationary if its statistical properties (
 - By differencing Total Inflation data, we will ensure that the time series meets the stationarity assumption. Below is the visual differenced Total Inflation;
   ![differenced total inflation](https://github.com/user-attachments/assets/8ce139e8-db48-4af6-a264-28f088f888a7)
 
-- As seen above after differencing, we can assume stationarity because the mean seem to revolve on a costanttly by Zero, but to confirm we need to test at 5% Significance level.Setting up our Hypothesis of unit root test we have that; 
+- As seen above after differencing, we can assume stationarity because the mean seem to revolve on a costanttly by Zero, but to confirm we need to test at 5% Significance level. Setting up our Hypothesis of unit root test we have that; 
 - NULL HYPOTHESIS: Total Inflation is Stationery
 - ALTERNATIVE HYPOTHESIS: REJECT THE NULL HYPOTHESIS
 ![Screenshot_23-2-2025_1763_](https://github.com/user-attachments/assets/b7d85697-c70e-4b2f-a779-e6def6cb9a43)
 - Using ADF to test for UNIT ROOT we have the following result above.
 
-- 💡INTERPRETATION:An ADF (Augmented Dickey-Fuller) test is a statistical method used to determine whether a time series is stationary by testing for the presence of a "unit root," which indicates non-stationarity. Since our t-statistic Probality is 0.1977 which is greater than our significance level 0.05. We fail to reject NULL HYPOTHESIS, which confirms our initial assumption that the trend is Non-Stationary.This suggests that our time series has a unit root and is non-stationary at the 5% significance level. This means the series exhibits trends, seasonality, or other time-dependent structures that need to be addressed before modeling.
+- 💡INTERPRETATION: ADF (Augmented Dickey-Fuller) test is a statistical method used to determine whether a time series is stationary by testing for the presence of a "unit root," which indicates non-stationarity for the raw data (at level) without applying any difference. Since our t-statistic Probality is 0.1977 which is greater than our significance level 0.05. We fail to reject NULL HYPOTHESIS, which confirms our initial assumption that the trend is Non-Stationary.This suggests that our time series has a unit root and is non-stationary at the 5% significance level. This means the series exhibits trends, seasonality, or other time-dependent structures that need to be addressed before modeling. If no modelling is involved we can end here, but since we will apply  modelling techniques later in this project we will need to convert our time series to stationarity.
 
-4️⃣ Building a forecasting model
-- In particular (ARIMA) model to predict future values.The AutoRegressive Integrated Moving Average (ARIMA) model is a powerful tool for inflation forecasting.
+- 📌 How do we achive statioarity: We need to do the ADF unit root test but perform the UNIT ROOT test on first difference. We use this option since our series is non-stationary at level and we want to test whether the first differenced series is stationary.
+![Screenshot 2025-02-23 222213](https://github.com/user-attachments/assets/4e355673-d436-441e-843a-59288a0c87eb)
+
+
+- 💡INTERPRETATION: Since our t-statistic Probality is 0.0000 which is less than our significance level 0.05, we reject NULL HYPOTHESIS, which implies that at first difference the time series is stationary. This means our time series required one round l(1) of differencing to achieve stationarity.
+
+4️⃣ Building a forecasting model.
+
+- Additional Structure: Before  we proceed further, we need to examine the autocorrelation function (ACF) and partial autocorrelation function (PACF) of the first differenced series to identify potential AR (autoregressive) or MA (moving average) terms for an ARIMA model which will be used for forecasting.
+
 
 📊 Steps:
 - Identify optimal parameters (p, d, q) using ACF/PACF plots.
