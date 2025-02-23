@@ -13,7 +13,6 @@ Let us visualize these trends and cary out descriptive statistics for all three 
 ![trend](https://github.com/user-attachments/assets/7c044b4c-b2ac-4b1c-baa4-6a3a23032b14)
 
 
-
 2️⃣ Insights from the Trend.
 
 - Seasonlity
@@ -29,7 +28,12 @@ Spurious Regression, thus we need to difference it. A time series is stationary 
 - By differencing, we ensure that your time series meets the stationarity assumption, leading to more reliable and interpretable models. Below is the visual differenced total inflation;
   ![differenced total inflation](https://github.com/user-attachments/assets/8ce139e8-db48-4af6-a264-28f088f888a7)
 
-- As seen above, we can assume stationarity, but to confirm we need to test at 5% Significance level.
+- As seen above, we can assume stationarity, but to confirm we need to test at 5% Significance level. Using ADF to test for UNIT ROOT we have the following result;
+- NULL HYPOTHESIS: Total Inflation is Stationery
+- ALTERNATIVE HYPOTHESIS: REJECT THE NULL HYPOTHESIS
+![Screenshot_23-2-2025_1763_](https://github.com/user-attachments/assets/b7d85697-c70e-4b2f-a779-e6def6cb9a43)
+
+- INTERPRETATION: Since our t-statistic Probality is 0.1977 which is greater than our significance level 0.05. We REJECT THE NULL HYPTHESIS, which confirma our initial assumption that the trend is Non-Stationary.
 
 4️⃣ Building a forecasting model
 - In particular (ARIMA) model to predict future values.The AutoRegressive Integrated Moving Average (ARIMA) model is a powerful tool for inflation forecasting.
