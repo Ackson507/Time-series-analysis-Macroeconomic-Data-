@@ -3,14 +3,18 @@ Univariate Time Series Analysis – Inflation Rate in Zambia [CASE OF DEVELOPING
 
 📌 Introdcution and Objectives of the Project.
 
-Inflation is a key macroeconomic indicator that directly impacts economic stability, business operations, and financial decision-making. In this project, we analyze Zambia’s inflation rate using time-series techniques to uncover trends, seasonality, and irregularities. The goal is to forecast future inflation rates and evaluate their economic implications, particularly for Small and Medium Enterprises (SMEs) and overall wages.
+Inflation is a key macroeconomic indicator that directly impacts economic stability, business operations, and financial decision-making. In this project, we analyze Zambia’s inflation rate using time-series techniques to uncover trends, seasonality, and irregularities. The goal in this project is to forecast future inflation rates and evaluate economic impact , particularly for Small and Medium Enterprises (SMEs) borowing capacity and influence with other macroeconomic indicators. To carry out this we use entirely utilize Eviews as our statistical software for Statistical analysis and visualization.
 
 1️⃣ Explore and visualize trends in a key macroeconomic variable (Inflation Rate).
-- What is inflation 💡?? Inflation refers to the general increase in the price of goods and services over time, leading to a decline in the purchasing power of money. It is typically measured by the Consumer Price Index (CPI).
-  
-- Causes of Inflation: Demand-pull inflation, cost-push inflation, monetary expansion.
-  
-- Effects: Higher cost of living, reduced purchasing power, increased borrowing costs.
+- What is inflation 💡?? Inflation refers to the general increase in the price of goods and services over time, leading to a decline in the purchasing power of money. It is typically measured by the Consumer Price Index (CPI). The causes of inflation are quite a number such as Demand-pull inflation, cost-push inflation, monetary expansion, and its effect is higher cost of living, reduced purchasing power, increased borrowing costs. In zambia, inflation is measure at National and provincial level, we will look at Total, Non-Food and Food Inflation from January 2011 upto January 2025. 
+
+Let us visualize these trends and cary out descriptive statistics for all three inflation categories. Data is already in foreign file [xlsv] we need to import in Eview to begin the analysis.
+![trends](https://github.com/user-attachments/assets/68c966e2-d914-4c62-8a04-9c8bb542b54c)
+
+
+
+
+
 
 2️⃣ Time-series decomposition.
 Identifying long-term trends, seasonality, and irregularities.
