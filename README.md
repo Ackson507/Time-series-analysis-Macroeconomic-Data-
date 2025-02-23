@@ -33,7 +33,7 @@ Spurious Regression, thus we need to difference it. A time series is stationary 
 - ALTERNATIVE HYPOTHESIS: REJECT THE NULL HYPOTHESIS
 ![Screenshot_23-2-2025_1763_](https://github.com/user-attachments/assets/b7d85697-c70e-4b2f-a779-e6def6cb9a43)
 
-- INTERPRETATION: Since our t-statistic Probality is 0.1977 which is greater than our significance level 0.05. We REJECT THE NULL HYPTHESIS, which confirma our initial assumption that the trend is Non-Stationary.
+- INTERPRETATION:An ADF (Augmented Dickey-Fuller) test is a statistical method used to determine whether a time series is stationary by testing for the presence of a "unit root," which indicates non-stationarity; essentially, it's a type of unit root test used to check for stationarity in a time series data. Since our t-statistic Probality is 0.1977 which is greater than our significance level 0.05. We REJECT THE NULL HYPTHESIS, which confirma our initial assumption that the trend is Non-Stationary.
 
 4️⃣ Building a forecasting model
 - In particular (ARIMA) model to predict future values.The AutoRegressive Integrated Moving Average (ARIMA) model is a powerful tool for inflation forecasting.
