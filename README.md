@@ -46,24 +46,19 @@ Spurious Regression. A time series is stationary if its statistical properties (
 - Additional Structure: Before  we proceed further, we need to examine the autocorrelation function (ACF) and partial autocorrelation function (PACF) of the first differenced series to identify potential AR (autoregressive) or MA (moving average) terms for an ARIMA model which will be used for forecasting and determine the appropriate ARIMA model.
 ACF (Autocorrelation Function):
 
-📊 Steps: After generating the correlogram (ACF and PACF plots) for the first differenced series;
+📊 Steps: After generating the Correlogram of Residuals (ACF and PACF plots) for the first differenced series;
+![Screenshot_24-2-2025_932_](https://github.com/user-attachments/assets/9eac1182-f1bf-4539-bd1f-1683bf5e17e1)
 
-- The ACF values start high at lag 1 (0.264) and decay slowly but remain significant up to lag 12. After lag 12, the ACF values become smaller and oscillate around zero, but some lags (e.g., lag 11, 12) remain significant. The ACF does not cut off sharply, which suggests the presence of an AR component.
-
-- PACF (Partial Autocorrelation Function): The PACF has a significant spike at lag 1 (0.264) and smaller spikes at lags 2 and 3. After lag 3, the PACF values become smaller and oscillate around zero, but some lags (e.g., lag 11, 12) remain significant. The PACF cuts off after lag 1, which suggests an AR(1) process.
-
-- Q-Statistic: The Q-statistic is significant (p-value < 0.05) for all lags, indicating that the series has significant autocorrelation.
+- The ACF values start high at lag 1 (0.264) and decay slowly but remain significant up to lag 12. After lag 12, the ACF values become smaller and oscillate around zero, but some lags (e.g., lag 11, 12) remain significant. The ACF does not cut off sharply, which suggests the presence of an AR component. The PACF has a significant spike at lag 1 (0.264) and smaller spikes at lags 2 and 3. After lag 3, the PACF values become smaller and oscillate around zero, but some lags (e.g., lag 11, 12) remain significant. The PACF cuts off after lag 1, which suggests an AR(1) process.
 
 Based on the ACF and PACF patterns: This indicates that the series likely follows an ARIMA(p, 1, q) model, where:
 
 - p (AR term): Likely 1 or 2 (based on the PACF).
-
-- d (differencing): 1 (since you are working with the first differenced series).
-
+- d (differencing): 1 (since we are working with the first differenced series).
 - q (MA term): Likely 0 (since the ACF does not cut off sharply).
 
-💡Therefore, we will start with a simple ARIMA(1, 1, 0) model and refine it if necessary.
+💡Therefore, we will start with a simple ARIMA(1, 1, 0) model and refine it if necessary using AIC OR BIC process.
+
   
 5️⃣ Evaluate economic implications on:
-- SME's [Small and Medium Enterprises
-- Overal Wages.
+- SME's [Small and Medium Enterprises] and Purchasing Power of the Currency
