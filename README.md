@@ -16,7 +16,10 @@ Let us visualize these trends and carry out descriptive statistics for all three
 
 2️⃣ Insights from the Trend.
 
-- Seasonality: In 2015 4th quarter to 2017 first quarter is a season of interest to study what transpired and what intervention was made. During this period, we had a sudden surge increase in the inflation rate spiked as high as 22.9% and reverted to normal within this period.According to the Bank of Zambia (BoZ) data, the inflation rate in 2016 significantly declined throughout the year, peaking at around 22.9% in early 2016 and falling to single digits by the end of the year, with the average inflation rate for the second half of 2016 being around 14.5% due to base effects and a tightening monetary policy.
+- Seasonality: In 2015 4th quarter to 2017 first quarter is a season of interest to study what transpired and what intervention was made. During this period, we had a sudden surge increase in the inflation rate spiked as high as 22.9% and reverted to normal within this period.According to the Bank of Zambia (BoZ) data, the inflation rate in 2016 significantly declined throughout the year, peaking at around 22.9% in early 2016 and falling to single digits by the end of the year, with the average inflation rate for the second half of 2016 being around 14.5% due to base effects and a tightening monetary policy. The sudden increase was mainly due to increase in Food, drought affected agricultural output, Zambian Kwacha experienced a severe depreciation in late 2015, losing significant value against the US dollar due to:
+Falling copper prices (Zambia’s main export and source of forex), Reduced foreign investment and lower inflows from mining and Increased government debt and fiscal deficits.
+
+- Seasonality Intervention by BoZ: BoZ increased the policy rate to 15.5% in 2016, raised the Statutory Reserve Ratio (SRR), requiring commercial banks to hold more reserves and limiting their ability to lend and The central bank intervened in forex markets by selling US dollars to stabilize the Kwacha.
 
 - Trend:  It is observable to see that during the period of 2011 4th quarter to 2015 3rd quarter, we had a constant rate of overall inflation ranging within the Bank of Zambia target of 6-8%. 
 
