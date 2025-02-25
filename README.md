@@ -22,7 +22,7 @@ Falling copper prices (Zambia’s main export and source of forex), Reduced fore
 - Seasonality Intervention by BoZ: BoZ increased the policy rate to 15.5% in 2016, raised the Statutory Reserve Ratio (SRR), requiring commercial banks to hold more reserves and limiting their ability to lend and The central bank intervened in forex markets by selling US dollars to stabilize the Kwacha.
 
 - Trend:  It is observable to see that during the period of 2011 4th quarter to 2015 3rd quarter, we had a constant rate of overall inflation ranging within the Bank of Zambia target of 6-8%. 
-- Recommendation: Since Zambia is highly dependent on imports, exchange rate depreciation fuels imported inflation. To mitigate this: Increase Foreign Exchange Reserves meaning BoZ should accumulate higher forex reserves during economic booms (when copper prices are high) to intervene more effectively during currency crises, The Food Reserve Agency (FRA) should maintain adequate maize reserves to stabilize food prices during droughts or supply shocks which is major contributor to food inflation, and last but not least increase investment in irrigation systems, drought-resistant crops, and commercial farming to reduce dependency on rain-fed agriculture.
+- RECOMMENDATION: Since Zambia is highly dependent on imports, exchange rate depreciation fuels imported inflation. To mitigate this: Increase Foreign Exchange Reserves meaning BoZ should accumulate higher forex reserves during economic booms (when copper prices are high) to intervene more effectively during currency crises, The Food Reserve Agency (FRA) should maintain adequate maize reserves to stabilize food prices during droughts or supply shocks which is major contributor to food inflation, and last but not least increase investment in irrigation systems, drought-resistant crops, and commercial farming to reduce dependency on rain-fed agriculture.
 
 3️⃣ Initial Step to forcasting: Testing for stationarity using Unit Root Test
 Many economic and financial time series (e.g., inflation, GDP, stock prices) are non-stationary because they exhibit trends, seasonality, or other time-dependent structures. Non-stationary data can lead to
@@ -68,3 +68,16 @@ Based on the ACF and PACF patterns: This indicates that the series likely follow
   
 5️⃣ Evaluate economic implications on:
 - SME's [Small and Medium Enterprises] and Purchasing Power of the Currency
+
+
+REFERENCE
+1: International Monetary Fund.
+https://www.imf.org/external/datamapper/NGDPDPC@WEO/ZMB?zoom=ZMB&highlight=ZMB
+
+2: WORLD BANK
+https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS?locations=ZM
+
+3: Bank of Zambia
+https://www.boz.zm/statistics.htm
+
+
