@@ -3,7 +3,7 @@ Univariate Time Series Analysis – Inflation Rate in Zambia [CASE OF DEVELOPING
 
 📌 Introdcution and Objectives of the Project.
 
-Inflation is a key macroeconomic indicator that directly impacts economic stability, business operations, and financial decision-making. In this project, we analyze Zambia’s inflation rate using time-series techniques to uncover trends, seasonality, and irregularities. The goal of this project is to forecast future inflation rates and evaluate economic impact, particularly for Small and Medium Enterprises (SMEs) borrowing capacity and influence with other macroeconomic indicators. To carry out this we use entirely utilize Eviews as our statistical software for Statistical analysis and visualization.
+Inflation is a key macroeconomic indicator that directly impacts economic stability, business operations, and financial decision-making. In this project, we analyze Zambia’s inflation rate using time-series techniques to uncover trends, seasonality, and irregularities. The goal of this project is to forecast future inflation rates and evaluate economic influence with other macroeconomic indicators. To carry out this we use entirely utilize Eviews as our statistical software for Statistical analysis and visualization.
 
 1️⃣   Explore and visualize trends in a key macroeconomic variable (Inflation Rate).
 
@@ -67,8 +67,8 @@ Based on the ACF and PACF patterns: This indicates that the series likely follow
 ![Screenshot 2025-02-25 174747](https://github.com/user-attachments/assets/464f408d-9595-4eb0-9797-de4c7632680c)
 
   
-5️⃣ Evaluate economic implications on:
-- SME's [Small and Medium Enterprises] and Purchasing Power of the Currency
+5️⃣ Evaluating inflation influence on other Economic Indicators:
+- 
 
 
 REFERENCE
