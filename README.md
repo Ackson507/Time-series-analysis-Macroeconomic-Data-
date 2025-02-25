@@ -63,7 +63,8 @@ Based on the ACF and PACF patterns: This indicates that the series likely follow
 - d (differencing): 1 (since we are working with the first differenced series).
 - q (MA term): Likely 0 (since the ACF does not cut off sharply).
 
-💡Therefore, we will start with a simple ARIMA(1, 1, 0) model and refine it if necessary using AIC OR BIC process.
+💡Therefore, we will start with a simple ARIMA(1, 1, 0) and ARIMA(1, 1, 0) model,pick the most efficient, and refine it if necessary using AIC OR BIC process. Then we can use it for forecasting emediate future inflationary values.
+![Screenshot 2025-02-25 174747](https://github.com/user-attachments/assets/464f408d-9595-4eb0-9797-de4c7632680c)
 
   
 5️⃣ Evaluate economic implications on:
