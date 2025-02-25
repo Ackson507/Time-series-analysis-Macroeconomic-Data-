@@ -16,9 +16,9 @@ Let us visualize these trends and carry out descriptive statistics for all three
 
 2️⃣ Insights from the Trend.
 
-- Seasonality: In 2015 4th quarter to 2017 first quarter is a season of interest to study what transpired and what intervention was made. During this period, we had a sudden surge increase in the inflation rate spiked as high as 22.9% and reverted to normal within this period.
+- Seasonality: In 2015 4th quarter to 2017 first quarter is a season of interest to study what transpired and what intervention was made. During this period, we had a sudden surge increase in the inflation rate spiked as high as 22.9% and reverted to normal within this period.According to the Bank of Zambia (BoZ) data, the inflation rate in 2016 significantly declined throughout the year, peaking at around 22.9% in early 2016 and falling to single digits by the end of the year, with the average inflation rate for the second half of 2016 being around 14.5% due to base effects and a tightening monetary policy.
 
-- Trend:  It is observable to see that during the period of 2011 4th quarter to 2015 3rd quarter, we had a constant rate of overall inflation ranging within the Bank of Zambia target of 6-8%.
+- Trend:  It is observable to see that during the period of 2011 4th quarter to 2015 3rd quarter, we had a constant rate of overall inflation ranging within the Bank of Zambia target of 6-8%. 
 
 3️⃣ Testing for stationarity using Unit Root Test
 Many economic and financial time series (e.g., inflation, GDP, stock prices) are non-stationary because they exhibit trends, seasonality, or other time-dependent structures. Non-stationary data can lead to
