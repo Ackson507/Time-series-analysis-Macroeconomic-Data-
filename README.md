@@ -3,7 +3,7 @@ Univariate Time Series Analysis – Inflation Rate in Zambia [CASE OF DEVELOPING
 
 📌 Introdcution and Objectives of the Project.
 
-Inflation is a key macroeconomic indicator that directly impacts economic stability, business operations, and financial decision-making. In this project, we analyze Zambia’s inflation rate using time-series techniques to uncover trends, seasonality, and irregularities. The goal of this project is to forecast future inflation rates and evaluate economic influence with other macroeconomic indicators. To carry out this we use entirely utilize Eviews as our statistical software for Statistical analysis and visualization.
+Inflation is a key macroeconomic indicator that directly impacts economic stability, business operations, and financial decision-making. In this project, we analyze Zambia’s inflation rate using time-series techniques to uncover trends, seasonality, and irregularities. The goal of this project is to carry out Exploratory analysis, Building forecasting time series econometric model for future inflation rates. To carry out this we use entirely utilize Eviews as our statistical software for Statistical analysis and visualization.
 
 1️⃣   Explore and visualize trends in a key macroeconomic variable (Inflation Rate).
 
@@ -64,11 +64,8 @@ Based on the ACF and PACF patterns: This indicates that the series likely follow
 - q (MA term): Likely 0 (since the ACF does not cut off sharply).
 
 💡Therefore, we will start with a simple ARIMA(1, 1, 0) and ARIMA(1, 1, 0) model,pick the most efficient, and refine it if necessary using AIC OR BIC process. Then we can use it for forecasting emediate future inflationary values.
-![Screenshot 2025-02-25 174747](https://github.com/user-attachments/assets/464f408d-9595-4eb0-9797-de4c7632680c)
 
-  
-5️⃣ Evaluating inflation influence on other Economic Indicators:
-- 
+![Screenshot 2025-02-25 174747](https://github.com/user-attachments/assets/464f408d-9595-4eb0-9797-de4c7632680c)
 
 
 REFERENCE
