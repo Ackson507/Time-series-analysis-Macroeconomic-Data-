@@ -68,14 +68,15 @@ Based on the ACF and PACF patterns: This indicates that the series likely follow
 ![Screenshot 2025-02-25 174747](https://github.com/user-attachments/assets/464f408d-9595-4eb0-9797-de4c7632680c)
 
 
-REFERENCE
-1: International Monetary Fund.
+REFERENCE:
+
+- 1: International Monetary Fund.
 https://www.imf.org/external/datamapper/NGDPDPC@WEO/ZMB?zoom=ZMB&highlight=ZMB
 
-2: WORLD BANK
+- 2: WORLD BANK
 https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS?locations=ZM
 
-3: Bank of Zambia
+- 3: Bank of Zambia
 https://www.boz.zm/statistics.htm
 
 
