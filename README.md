@@ -36,38 +36,36 @@ Since Zambia is highly dependent on imports, exchange rate depreciation fuels im
 
 The Food Reserve Agency (FRA) should maintain adequate maize reserves to stabilize food prices during droughts or supply shocks which is major contributor to food inflation, and last but not least increase investment in irrigation systems, drought-resistant crops, and commercial farming to reduce dependency on rain-fed agriculture.
 
-## 3️⃣ Initial Step to for our Modeling: Testing for stationarity using Unit Root Test
+## 3️⃣ Initial Step for our Modeling: Testing for stationarity using Unit Root Test
 Many economic and financial time series (e.g., inflation, GDP, stock prices) are non-stationary because they exhibit trends, seasonality, or other time-dependent structures. Non-stationary data can lead to
 Spurious Regression. A time series is stationary if its statistical properties (mean, variance, and autocorrelation) remain constant over time, this is a key assumption in many time series models (e.g., ARIMA, VAR) because:
-- Ensures that the relationships between variables are stable over time.
-- It simplifies modeling and forecasting.
+- Ensures that the relationships between variables are stable over time and it simplifies modeling and forecasting.
   
-- By differencing Total Inflation data, we will ensure that the time series meets the stationarity assumption. Below is the visual differenced Total Inflation;
-  ![differenced total inflation](https://github.com/user-attachments/assets/8ce139e8-db48-4af6-a264-28f088f888a7)
-
-- As seen above after differencing, we can assume stationarity because the mean seem to revolve on a costanttly by Zero, but to confirm we need to test at 5% Significance level. Setting up our Hypothesis of unit root test we have that; 
-- NULL HYPOTHESIS: Total Inflation is Stationery
-- ALTERNATIVE HYPOTHESIS: REJECT THE NULL HYPOTHESIS
-![Screenshot_23-2-2025_1763_](https://github.com/user-attachments/assets/b7d85697-c70e-4b2f-a779-e6def6cb9a43)
-- Using ADF to test for UNIT ROOT we have the following result above.
-
-- 💡INTERPRETATION: ADF (Augmented Dickey-Fuller) test is a statistical method used to determine whether a time series is stationary by testing for the presence of a "unit root," which indicates non-stationarity for the raw data (at level) without applying any difference. Since our t-statistic Probality is 0.1977 which is greater than our significance level 0.05. We fail to reject NULL HYPOTHESIS, which confirms our initial assumption that the trend is Non-Stationary. This suggests that our time series has a unit root and is non-stationary at the 5% significance level. This means the series exhibits trends, seasonality, or other time-dependent structures that need to be addressed before modeling. If no modeling is involved we can end here, but since we will apply modeling techniques later in this project we will need to convert our time series to stationarity.
-
-- 📌 How do we achive statioarity: We need to do the ADF unit root test but perform the UNIT ROOT test on first difference. We use this option since our series is non-stationary at level and we want to test whether the first differenced series is stationary.
-![Screenshot 2025-02-23 222213](https://github.com/user-attachments/assets/4e355673-d436-441e-843a-59288a0c87eb)
+- By differencing Inflation data, we will ensure that the time series meets the stationarity assumption.
+  ![differenced](https://github.com/user-attachments/assets/72e8596c-9e59-4131-9e79-532d8b1b45f9)
 
 
-- 💡INTERPRETATION: Since our t-statistic Probality is 0.0000 which is less than our significance level 0.05, we reject NULL HYPOTHESIS, which implies that at first difference the time series is stationary. This means our time series required one round l(1) of differencing to achieve stationarity.
+We can assume stationarity because the mean seem to revolve on a costant mean zero, but to confirm we need to test at 5% Significance level. Setting up our Hypothesis of unit root test we have that;
+- Null Hypthesis: INFLATION HAS A UNIT ROOT
+- Alternative Hypothesis: NO UNIT ROOT
+  
+![Screenshot 2025-02-27 103743](https://github.com/user-attachments/assets/4c44256b-73a2-43b7-b9ba-9e7e3afdb834)
 
-## 4️⃣ Building a forecasting model.
+- 💡INTERPRETATION:
+
+ADF (Augmented Dickey-Fuller) test is a statistical method used to determine whether a time series is stationary by testing for the presence of a "unit root," which indicates non-stationarity. At level (Raw Data) we failed to reject  Null Hypothesis because our t-statistic is 0.0753 greater than our significance level meaning original data was non-stationary as ealier assumed. Since our t-statistic Probality is 0.0000 which is less than our significance level 0.05 when we take first-difference the data, this suggests that our time series has a no unit root and is stationary at the 5% significance level.
+
+## 4️⃣ Modeling: Testing for Autocorrelation.
 
 - Additional Structure: Before  we proceed further, we need to examine the autocorrelation function (ACF) and partial autocorrelation function (PACF) of the first differenced series to identify potential AR (autoregressive) or MA (moving average) terms for an ARIMA model which will be used for forecasting and determine the appropriate ARIMA model.
 ACF (Autocorrelation Function):
 
 📊 Steps: After generating the Correlogram of Residuals (ACF and PACF plots) for the first differenced series;
-![Screenshot_24-2-2025_932_](https://github.com/user-attachments/assets/9eac1182-f1bf-4539-bd1f-1683bf5e17e1)
+![Screenshot 2025-02-27 105417](https://github.com/user-attachments/assets/5dad2116-851e-46ed-a8eb-a6cd6f113348)
 
-- The ACF values start high at lag 1 (0.264) and decay slowly but remain significant up to lag 12. After lag 12, the ACF values become smaller and oscillate around zero, but some lags (e.g., lag 11, 12) remain significant. The ACF does not cut off sharply, which suggests the presence of an AR component. The PACF has a significant spike at lag 1 (0.264) and smaller spikes at lags 2 and 3. After lag 3, the PACF values become smaller and oscillate around zero, but some lags (e.g., lag 11, 12) remain significant. The PACF cuts off after lag 1, which suggests an AR(1) process.
+- 💡INTERPRETATION:
+
+The ACF values start high at lag 1 (0.264) and decay slowly but remain significant up to lag 12. After lag 12, the ACF values become smaller and oscillate around zero, but some lags (e.g., lag 11, 12) remain significant. The ACF does not cut off sharply, which suggests the presence of an AR component. The PACF has a significant spike at lag 1 (0.264) and smaller spikes at lags 2 and 3. After lag 3, the PACF values become smaller and oscillate around zero, but some lags (e.g., lag 11, 12) remain significant. The PACF cuts off after lag 1, which suggests an AR(1) process.
 
 Based on the ACF and PACF patterns: This indicates that the series likely follows an ARIMA(p, 1, q) model, where:
 
@@ -75,10 +73,7 @@ Based on the ACF and PACF patterns: This indicates that the series likely follow
 - d (differencing): 1 (since we are working with the first differenced series).
 - q (MA term): Likely 0 (since the ACF does not cut off sharply).
 
-💡Therefore, we will start with a simple ARIMA(1, 1, 0) and ARIMA(1, 1, 0) model,pick the most efficient, and refine it if necessary using AIC OR BIC process. Then we can use it for forecasting emediate future inflationary values.
-
-![Screenshot 2025-02-25 174747](https://github.com/user-attachments/assets/464f408d-9595-4eb0-9797-de4c7632680c)
-
+Therefore, we will start with a simple ARIMA(1, 1, 0) and ARIMA(1, 1, 0) model, pick the most efficient, and refine it if necessary using AIC OR BIC process before doing any forecast in the next project.
 
 ## REFERENCE:
 
