@@ -1,5 +1,8 @@
 # Time-series-analysis [Macroeconomic Data]
 Univariate Time Series Analysis – Inflation Rate in Zambia [CASE OF DEVELOPING COUNTRIES]📊
+![1x-1](https://github.com/user-attachments/assets/8edbcbf2-bc76-409f-8c85-36de7f2c9f71)
+
+
 
 📌 Introdcution and Objectives of the Project.
 
